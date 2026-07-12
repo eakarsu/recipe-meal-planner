@@ -1,0 +1,30 @@
+{
+  "id": "recipe-meal-planner",
+  "title": "Recipe Meal Planner App",
+  "industry": "Retail, Commerce & Consumer",
+  "industryId": "retail-commerce-consumer",
+  "specialization": "Recipe Meal Planner",
+  "sourcePlatformGroup": "food-hospitality-platform",
+  "sources": [
+    "AIMenuDigitizer",
+    "AiRecipeMealPlanner",
+    "cateringService",
+    "recipemanager"
+  ],
+  "featureCount": 271,
+  "candidateFeatureCount": 389,
+  "eliminatedSimilarFeatures": 118,
+  "evidenceCount": 897,
+  "aiPageCount": 0,
+  "sourceAIPageCount": 0,
+  "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
+  "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
+  "database": "database.sqlite",
+  "databaseSeed": {
+    "seededProjects": 1,
+    "seededTables": 6,
+    "seededRows": 133
+  },
+  "visibleFeatureCount": 3,
+  "featureVisibilityMode": "seeded-or-ai"
+}
