@@ -11,19 +11,19 @@
     "cateringService",
     "recipemanager"
   ],
-  "featureCount": 271,
-  "candidateFeatureCount": 389,
-  "eliminatedSimilarFeatures": 118,
-  "evidenceCount": 897,
+  "featureCount": 270,
+  "candidateFeatureCount": 407,
+  "eliminatedSimilarFeatures": 137,
+  "evidenceCount": 866,
   "aiPageCount": 0,
   "sourceAIPageCount": 0,
   "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
   "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
   "database": "database.sqlite",
   "databaseSeed": {
-    "seededProjects": 1,
-    "seededTables": 6,
-    "seededRows": 133
+    "seededProjects": 2,
+    "seededTables": 7,
+    "seededRows": 148
   },
   "visibleFeatureCount": 3,
   "featureVisibilityMode": "seeded-or-ai"

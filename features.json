@@ -1,5 +1,67 @@
 [
   {
+    "name": "Adjust",
+    "canonicalKey": "adjust",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/ingredients/:id/adjust",
+      "/item/:id/adjust"
+    ],
+    "sourceProjects": [
+      "cateringService",
+      "footTruck"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/food-flow-order",
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "footTruck",
+        "path": "backend/src/routes/inventory.js:224",
+        "route": "/item/:id/adjust",
+        "originApp": "retail-commerce-consumer/food-flow-order"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "cateringService",
+        "path": "backend/src/routes/kitchen.js:482",
+        "route": "/ingredients/:id/adjust",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
+    "name": "Adjust Dietary",
+    "canonicalKey": "adjust dietary",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/adjust-dietary"
+    ],
+    "sourceProjects": [
+      "AiRecipeMealPlanner"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "backend/routes/ai.js:25",
+        "route": "/adjust-dietary",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "AI Analysis Page",
     "canonicalKey": "ai analysis",
     "aliases": [
@@ -76,12 +138,10 @@
     "canonicalKey": "ai delivery optimization route",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/ai-delivery-route-optimization",
-      "/batch09/gap-ai/ai-delivery-route-optimization"
+      "/ai-delivery-route-optimization"
     ],
     "sourceProjects": [
       "cateringService"
@@ -95,13 +155,6 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/batch09GapAi.js:58",
         "route": "/ai-delivery-route-optimization",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:110",
-        "route": "/batch09/gap-ai/ai-delivery-route-optimization",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -137,12 +190,10 @@
     "canonicalKey": "ai dietary restriction substitution suggestion",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/ai-dietary-restriction-substitution-suggestions",
-      "/batch09/gap-ai/ai-dietary-restriction-substitution-suggestions"
+      "/ai-dietary-restriction-substitution-suggestions"
     ],
     "sourceProjects": [
       "cateringService"
@@ -157,19 +208,12 @@
         "path": "backend/src/routes/batch09GapAi.js:84",
         "route": "/ai-dietary-restriction-substitution-suggestions",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:112",
-        "route": "/batch09/gap-ai/ai-dietary-restriction-substitution-suggestions",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
   },
   {
     "name": "AI Dietary Restriction Substitution Suggestions Gap AI",
-    "canonicalKey": "ai dietary gap restriction substitution suggestions",
+    "canonicalKey": "ai dietary gap restriction substitution suggestion",
     "aliases": [],
     "kinds": [
       "page"
@@ -198,12 +242,10 @@
     "canonicalKey": "ai by client menu prediction profile success",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/ai-menu-success-prediction-by-client-profile",
-      "/batch09/gap-ai/ai-menu-success-prediction-by-client-profile"
+      "/ai-menu-success-prediction-by-client-profile"
     ],
     "sourceProjects": [
       "cateringService"
@@ -217,13 +259,6 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/batch09GapAi.js:45",
         "route": "/ai-menu-success-prediction-by-client-profile",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:109",
-        "route": "/batch09/gap-ai/ai-menu-success-prediction-by-client-profile",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -259,12 +294,10 @@
     "canonicalKey": "ai conversion modeling proposal to win",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/ai-proposal-to-win-conversion-modeling",
-      "/batch09/gap-ai/ai-proposal-to-win-conversion-modeling"
+      "/ai-proposal-to-win-conversion-modeling"
     ],
     "sourceProjects": [
       "cateringService"
@@ -278,13 +311,6 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/batch09GapAi.js:71",
         "route": "/ai-proposal-to-win-conversion-modeling",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:111",
-        "route": "/batch09/gap-ai/ai-proposal-to-win-conversion-modeling",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -311,68 +337,6 @@
         "sourceProject": "cateringService",
         "path": "frontend/src/pages/Batch09/AiProposalToWinConversionModelingGapAi.jsx",
         "route": "/Batch09/AiProposalToWinConversionModelingGapAi",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
-    "name": "Adjust",
-    "canonicalKey": "adjust",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/ingredients/:id/adjust",
-      "/item/:id/adjust"
-    ],
-    "sourceProjects": [
-      "cateringService",
-      "footTruck"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/food-flow-order",
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "footTruck",
-        "path": "backend/src/routes/inventory.js:153",
-        "route": "/item/:id/adjust",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "cateringService",
-        "path": "backend/src/routes/kitchen.js:482",
-        "route": "/ingredients/:id/adjust",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
-    "name": "Adjust Dietary",
-    "canonicalKey": "adjust dietary",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/adjust-dietary"
-    ],
-    "sourceProjects": [
-      "AiRecipeMealPlanner"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AiRecipeMealPlanner",
-        "path": "backend/routes/ai.js:25",
-        "route": "/adjust-dietary",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -415,32 +379,6 @@
         "sourceProject": "AiRecipeMealPlanner",
         "path": "frontend/src/pages/AllergenDetection.js",
         "route": "/AllergenDetection",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
-    "name": "Allergens Page",
-    "canonicalKey": "allergens",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/AllergensPage"
-    ],
-    "sourceProjects": [
-      "AIMenuDigitizer"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIMenuDigitizer",
-        "path": "frontend/src/pages/AllergensPage.tsx",
-        "route": "/AllergensPage",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -574,61 +512,6 @@
     ]
   },
   {
-    "name": "Approve",
-    "canonicalKey": "approve",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/:id/approve",
-      "/time-entries/:id/approve",
-      "/transfers/:id/approve"
-    ],
-    "sourceProjects": [
-      "AICemeteryMemorialParkManager",
-      "AICommercialCleaningOperations",
-      "AIPawnShopSecondhandDealer",
-      "cateringService"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/cemetery-memorial-park-manager",
-      "retail-commerce-consumer/circular-economy-upcycling-marketplace",
-      "retail-commerce-consumer/commercial-cleaning-operations",
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AICommercialCleaningOperations",
-        "path": "backend/routes/expenses.js:79",
-        "route": "/:id/approve",
-        "originApp": "retail-commerce-consumer/commercial-cleaning-operations"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AICemeteryMemorialParkManager",
-        "path": "server/routes/obituaries.js:168",
-        "route": "/:id/approve",
-        "originApp": "retail-commerce-consumer/cemetery-memorial-park-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIPawnShopSecondhandDealer",
-        "path": "server/routes/extensions.js:200",
-        "route": "/transfers/:id/approve",
-        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "cateringService",
-        "path": "backend/src/routes/staff.js:352",
-        "route": "/time-entries/:id/approve",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
     "name": "Assignments",
     "canonicalKey": "assignment",
     "aliases": [],
@@ -636,16 +519,26 @@
       "api"
     ],
     "routes": [
-      "/assignments"
+      "/assignments",
+      "/experiments/:id/assignments"
     ],
     "sourceProjects": [
       "AIMenuDigitizer",
+      "AIPricingOptimizer",
       "cateringService"
     ],
     "consolidatedFromApps": [
+      "retail-commerce-consumer/pricing-optimizer",
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "backend/routes/governedPricing.js:228",
+        "route": "/experiments/:id/assignments",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
       {
         "kind": "api",
         "sourceProject": "AIMenuDigitizer",
@@ -985,6 +878,104 @@
     "evidence": [
       {
         "kind": "api",
+        "sourceProject": "GenericOrderingServiceEnhanced",
+        "path": "backend/app/routers/items.py:171",
+        "route": "/bulk-delete",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "GenericOrderingServiceEnhanced",
+        "path": "backend/app/routers/orders.py:197",
+        "route": "/bulk-delete",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "GenericOrderingServiceEnhanced",
+        "path": "backend/app/routers/users.py:169",
+        "route": "/bulk-delete",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "OrderingServiceText2",
+        "path": "backend/routers/menu_items.py:56",
+        "route": "/bulk-delete",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "OrderingServiceText2",
+        "path": "backend/routers/orders.py:99",
+        "route": "/bulk-delete",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "OrderingServiceText2",
+        "path": "backend/routers/users.py:80",
+        "route": "/bulk-delete",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "genericServiceOrder",
+        "path": "admin/routers/orders.py:119",
+        "route": "/bulk-delete",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "GenericOrderingServiceEnhanced",
+        "path": "backend/app/routers/items.py:179",
+        "route": "/bulk-update",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "GenericOrderingServiceEnhanced",
+        "path": "backend/app/routers/orders.py:207",
+        "route": "/bulk-update",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "GenericOrderingServiceEnhanced",
+        "path": "backend/app/routers/users.py:179",
+        "route": "/bulk-update",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "OrderingServiceText2",
+        "path": "backend/routers/menu_items.py:62",
+        "route": "/bulk-update",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "OrderingServiceText2",
+        "path": "backend/routers/orders.py:105",
+        "route": "/bulk-update",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "OrderingServiceText2",
+        "path": "backend/routers/users.py:86",
+        "route": "/bulk-update",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "genericServiceOrder",
+        "path": "admin/routers/orders.py:131",
+        "route": "/bulk-update",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
         "sourceProject": "laundryServices",
         "path": "backend/src/routes/coupons.js:117",
         "route": "/bulk",
@@ -1091,14 +1082,14 @@
       {
         "kind": "api",
         "sourceProject": "laundryServices",
-        "path": "backend/src/routes/orders.js:110",
+        "path": "backend/src/routes/orders.js:109",
         "route": "/bulk",
         "originApp": "retail-commerce-consumer/laundry-services"
       },
       {
         "kind": "api",
         "sourceProject": "laundryServices",
-        "path": "backend/src/routes/orders.js:96",
+        "path": "backend/src/routes/orders.js:95",
         "route": "/bulk",
         "originApp": "retail-commerce-consumer/laundry-services"
       },
@@ -1164,104 +1155,6 @@
         "path": "backend/src/routes/subscriptions.js:410",
         "route": "/bulk",
         "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "backend/app/routers/items.py:171",
-        "route": "/bulk-delete",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "backend/app/routers/orders.py:197",
-        "route": "/bulk-delete",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "backend/app/routers/users.py:169",
-        "route": "/bulk-delete",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/routers/menu_items.py:56",
-        "route": "/bulk-delete",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/routers/orders.py:94",
-        "route": "/bulk-delete",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/routers/users.py:80",
-        "route": "/bulk-delete",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "admin/routers/orders.py:119",
-        "route": "/bulk-delete",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "backend/app/routers/items.py:179",
-        "route": "/bulk-update",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "backend/app/routers/orders.py:207",
-        "route": "/bulk-update",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "backend/app/routers/users.py:179",
-        "route": "/bulk-update",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/routers/menu_items.py:62",
-        "route": "/bulk-update",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/routers/orders.py:100",
-        "route": "/bulk-update",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/routers/users.py:86",
-        "route": "/bulk-update",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "admin/routers/orders.py:131",
-        "route": "/bulk-update",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
       },
       {
         "kind": "api",
@@ -1395,13 +1288,6 @@
         "path": "backend/src/routes/serviceOrders.js:156",
         "route": "/bulk-update",
         "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AiECommerceAgent",
-        "path": "backend/src/routes/index.js:1418",
-        "route": "/products/:productId/variants/bulk",
-        "originApp": "retail-commerce-consumer/personal-stylist"
       },
       {
         "kind": "api",
@@ -1601,6 +1487,13 @@
       },
       {
         "kind": "api",
+        "sourceProject": "AiECommerceAgent",
+        "path": "backend/src/routes/index.js:1418",
+        "route": "/products/:productId/variants/bulk",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
         "sourceProject": "AIWholesaleDistributionOptimizer",
         "path": "server/routes/settings.js:21",
         "route": "/bulk",
@@ -1608,8 +1501,106 @@
       },
       {
         "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/accommodations.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/activities.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/budgets.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/destinations.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/documents.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/emergencyContacts.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/notes.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/packingLists.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/photos.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/restaurants.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/reviews.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/transportation.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/travelTips.js:20",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/trips.js:41",
+        "route": "/bulk",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/events.js:388",
+        "path": "backend/src/routes/events.js:387",
         "route": "/:eventId/booths/bulk",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -1658,63 +1649,49 @@
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/events.js:648",
+        "path": "backend/src/routes/events.js:647",
         "route": "/bulk-delete",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/financial.js:603",
+        "path": "backend/src/routes/financial.js:602",
         "route": "/expenses/bulk-delete",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/financial.js:627",
+        "path": "backend/src/routes/financial.js:626",
         "route": "/sales/bulk-delete",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/inventory.js:193",
+        "path": "backend/src/routes/inventory.js:277",
         "route": "/bulk-delete",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/locations.js:275",
+        "path": "backend/src/routes/locations.js:274",
         "route": "/bulk-delete",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/menus.js:387",
+        "path": "backend/src/routes/menus.js:426",
         "route": "/items/bulk-delete",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/orders.js:489",
-        "route": "/bulk-delete",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "footTruck",
-        "path": "backend/src/routes/permits.js:131",
-        "route": "/bulk-delete",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "footTruck",
-        "path": "backend/src/routes/social.js:312",
+        "path": "backend/src/routes/permits.js:130",
         "route": "/bulk-delete",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -1749,56 +1726,42 @@
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/events.js:660",
+        "path": "backend/src/routes/events.js:659",
         "route": "/bulk-update",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/financial.js:615",
+        "path": "backend/src/routes/financial.js:614",
         "route": "/expenses/bulk-update",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/inventory.js:213",
+        "path": "backend/src/routes/inventory.js:297",
         "route": "/bulk-update",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/locations.js:288",
+        "path": "backend/src/routes/locations.js:287",
         "route": "/bulk-update",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/menus.js:399",
+        "path": "backend/src/routes/menus.js:438",
         "route": "/items/bulk-update",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/orders.js:503",
-        "route": "/bulk-update",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "footTruck",
-        "path": "backend/src/routes/permits.js:151",
-        "route": "/bulk-update",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "footTruck",
-        "path": "backend/src/routes/social.js:324",
+        "path": "backend/src/routes/permits.js:150",
         "route": "/bulk-update",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -2207,104 +2170,6 @@
         "path": "backend/src/routes/venues.js:146",
         "route": "/bulk-update",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/accommodations.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/activities.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/budgets.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/destinations.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/documents.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/emergencyContacts.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/notes.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/packingLists.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/photos.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/restaurants.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/reviews.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/transportation.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/travelTips.js:20",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/trips.js:41",
-        "route": "/bulk",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
       }
     ]
   },
@@ -2401,6 +2266,7 @@
     "name": "Categories",
     "canonicalKey": "category",
     "aliases": [
+      "Categories Page",
       "Category",
       "Delete Category"
     ],
@@ -2414,9 +2280,11 @@
       "/:category",
       "/:menuId/categories",
       "/Categories",
+      "/CategoriesPage",
       "/api/categories",
       "/api/menu/category/:category",
       "/categories",
+      "/categories/CategoriesPage",
       "/category/:category",
       "/custom/:category",
       "/meta/categories",
@@ -2454,41 +2322,6 @@
       "retail-commerce-consumer/youth-sports-league-manager"
     ],
     "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "Boulevard",
-        "path": "server/src/routes/service-catalog.ts:11",
-        "route": "/categories",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "Boulevard",
-        "path": "server/src/routes/service-catalog.ts:32",
-        "route": "/categories",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "laundryServices",
-        "path": "backend/src/routes/garments.js:96",
-        "route": "/meta/categories",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "laundryServices",
-        "path": "backend/src/routes/services.js:140",
-        "route": "/meta/categories",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "localServiceDirectory",
-        "path": "src/app/(main)/categories/page.tsx",
-        "route": "/categories",
-        "originApp": "retail-commerce-consumer/local-service-directory"
-      },
       {
         "kind": "api",
         "sourceProject": "AIFuneralMemorialCreator",
@@ -2544,6 +2377,48 @@
         "path": "frontend/src/App.tsx:47",
         "route": "/categories",
         "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "OrderingServiceText2",
+        "path": "frontend/src/pages/categories/CategoriesPage.tsx",
+        "route": "/categories/CategoriesPage",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "Boulevard",
+        "path": "server/src/routes/service-catalog.ts:11",
+        "route": "/categories",
+        "originApp": "retail-commerce-consumer/laundry-services"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "Boulevard",
+        "path": "server/src/routes/service-catalog.ts:32",
+        "route": "/categories",
+        "originApp": "retail-commerce-consumer/laundry-services"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "laundryServices",
+        "path": "backend/src/routes/garments.js:96",
+        "route": "/meta/categories",
+        "originApp": "retail-commerce-consumer/laundry-services"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "laundryServices",
+        "path": "backend/src/routes/services.js:140",
+        "route": "/meta/categories",
+        "originApp": "retail-commerce-consumer/laundry-services"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "localServiceDirectory",
+        "path": "src/app/(main)/categories/page.tsx",
+        "route": "/categories",
+        "originApp": "retail-commerce-consumer/local-service-directory"
       },
       {
         "kind": "api",
@@ -2602,6 +2477,13 @@
         "originApp": "retail-commerce-consumer/inventory-forecasting"
       },
       {
+        "kind": "page",
+        "sourceProject": "FoodOrderingWebSite",
+        "path": "client/src/pages/CategoriesPage.tsx",
+        "route": "/CategoriesPage",
+        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
+      },
+      {
         "kind": "navigation",
         "sourceProject": "AIGhostKitchenNetworkManager",
         "path": "frontend/src/pages/Menus.jsx:17",
@@ -2646,7 +2528,7 @@
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/menus.js:139",
+        "path": "backend/src/routes/menus.js:178",
         "route": "/:menuId/categories",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -2927,32 +2809,22 @@
       "api"
     ],
     "routes": [
-      "/api/auth/check-password-strength",
       "/check-password-strength"
     ],
     "sourceProjects": [
-      "AIPricingOptimizer",
       "AiRecipeMealPlanner",
       "cateringService",
       "footTruck"
     ],
     "consolidatedFromApps": [
       "retail-commerce-consumer/food-flow-order",
-      "retail-commerce-consumer/pricing-optimizer",
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "AIPricingOptimizer",
-        "path": "backend/server.js:396",
-        "route": "/api/auth/check-password-strength",
-        "originApp": "retail-commerce-consumer/pricing-optimizer"
-      },
-      {
-        "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/auth.js:320",
+        "path": "backend/src/routes/auth.js:330",
         "route": "/check-password-strength",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -3032,7 +2904,7 @@
   },
   {
     "name": "Chefs Controller",
-    "canonicalKey": "chefs controller",
+    "canonicalKey": "chef controller",
     "aliases": [],
     "kinds": [
       "page"
@@ -3064,8 +2936,7 @@
       "page"
     ],
     "routes": [
-      "/ClientPortal",
-      "client-portal"
+      "/ClientPortal"
     ],
     "sourceProjects": [
       "cateringService"
@@ -3074,13 +2945,6 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:95",
-        "route": "client-portal",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
       {
         "kind": "page",
         "sourceProject": "cateringService",
@@ -3110,6 +2974,32 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/menus.js:303",
         "route": "",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
+    "name": "Commerce Operations",
+    "canonicalKey": "commerce operation",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/CommerceOperations"
+    ],
+    "sourceProjects": [
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "page",
+        "sourceProject": "cateringService",
+        "path": "frontend/src/pages/CommerceOperations.jsx",
+        "route": "/CommerceOperations",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -3281,8 +3171,7 @@
       "page"
     ],
     "routes": [
-      "/CostEstimator",
-      "cost-estimator"
+      "/CostEstimator"
     ],
     "sourceProjects": [
       "cateringService"
@@ -3291,13 +3180,6 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:96",
-        "route": "cost-estimator",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
       {
         "kind": "page",
         "sourceProject": "cateringService",
@@ -3329,32 +3211,6 @@
         "sourceProject": "AiRecipeMealPlanner",
         "path": "backend/routes/customViews.js:110",
         "route": "/cuisine-heatmap",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
-    "name": "Customer Satisfaction Prediction With Post Event Feedback",
-    "canonicalKey": "customer event feedback post prediction satisfaction with",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/batch09/cfs/customer-satisfaction-prediction-with-post-event-feedback"
-    ],
-    "sourceProjects": [
-      "cateringService"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:107",
-        "route": "/batch09/cfs/customer-satisfaction-prediction-with-post-event-feedback",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -3458,32 +3314,6 @@
     ]
   },
   {
-    "name": "Delivery Route Optimization With Traffic Prediction",
-    "canonicalKey": "delivery optimization prediction route traffic with",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/batch09/cfs/delivery-route-optimization-with-traffic-prediction"
-    ],
-    "sourceProjects": [
-      "cateringService"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:104",
-        "route": "/batch09/cfs/delivery-route-optimization-with-traffic-prediction",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
     "name": "Delivery Route Optimization With Traffic Prediction Cfs",
     "canonicalKey": "cfs delivery optimization prediction route traffic with",
     "aliases": [],
@@ -3573,25 +3403,16 @@
       "/demo-credentials"
     ],
     "sourceProjects": [
-      "AIGolfCourseOperationsManager",
       "AIMenuDigitizer",
       "AITravelItineraryPlanner",
       "AiECommerceAgent"
     ],
     "consolidatedFromApps": [
       "retail-commerce-consumer/classifytravelersecurity",
-      "retail-commerce-consumer/funeral-home-operations-manager",
       "retail-commerce-consumer/personal-stylist",
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AIGolfCourseOperationsManager",
-        "path": "server/routes/auth.js:70",
-        "route": "/demo-credentials",
-        "originApp": "retail-commerce-consumer/funeral-home-operations-manager"
-      },
       {
         "kind": "api",
         "sourceProject": "AiECommerceAgent",
@@ -3601,17 +3422,17 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AIMenuDigitizer",
-        "path": "backend/src/routes/auth.ts:349",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/auth.js:16",
         "route": "/demo-credentials",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
       },
       {
         "kind": "api",
-        "sourceProject": "AITravelItineraryPlanner",
-        "path": "backend/src/routes/auth.js:62",
+        "sourceProject": "AIMenuDigitizer",
+        "path": "backend/src/routes/auth.ts:365",
         "route": "/demo-credentials",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
   },
@@ -3662,11 +3483,9 @@
     "canonicalKey": "detailed dietary menus on restriction tagging",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/batch09/gap-nonai/detailed-dietary-restriction-tagging-on-menus",
       "/detailed-dietary-restriction-tagging-on-menus"
     ],
     "sourceProjects": [
@@ -3681,13 +3500,6 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/batch09GapNonai.js:58",
         "route": "/detailed-dietary-restriction-tagging-on-menus",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:114",
-        "route": "/batch09/gap-nonai/detailed-dietary-restriction-tagging-on-menus",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -4180,34 +3992,8 @@
     ]
   },
   {
-    "name": "Dynamic Pricing Demand Ingredient Costs Season",
-    "canonicalKey": "costs demand dynamic ingredient pricing season",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/batch09/cfs/dynamic-pricing-demand-ingredient-costs-season"
-    ],
-    "sourceProjects": [
-      "cateringService"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:103",
-        "route": "/batch09/cfs/dynamic-pricing-demand-ingredient-costs-season",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
     "name": "Dynamic Pricing Demand Ingredient Costs Season Cfs",
-    "canonicalKey": "cfs costs demand dynamic ingredient pricing season",
+    "canonicalKey": "cfs cost demand dynamic ingredient pricing season",
     "aliases": [],
     "kinds": [
       "page"
@@ -4286,11 +4072,9 @@
     "canonicalKey": "equipment inventory rental",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/batch09/gap-nonai/equipment-rental-inventory-management",
       "/equipment-rental-inventory-management"
     ],
     "sourceProjects": [
@@ -4305,13 +4089,6 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/batch09GapNonai.js:45",
         "route": "/equipment-rental-inventory-management",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:113",
-        "route": "/batch09/gap-nonai/equipment-rental-inventory-management",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -4369,32 +4146,6 @@
     ]
   },
   {
-    "name": "Equipment Utilization Scheduling",
-    "canonicalKey": "equipment scheduling utilization",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/batch09/cfs/equipment-utilization-scheduling"
-    ],
-    "sourceProjects": [
-      "cateringService"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:105",
-        "route": "/batch09/cfs/equipment-utilization-scheduling",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
     "name": "Equipment Utilization Scheduling Cfs",
     "canonicalKey": "cfs equipment scheduling utilization",
     "aliases": [],
@@ -4422,7 +4173,7 @@
   },
   {
     "name": "Errors Html",
-    "canonicalKey": "errors html",
+    "canonicalKey": "error html",
     "aliases": [],
     "kinds": [
       "page"
@@ -4606,6 +4357,42 @@
     ]
   },
   {
+    "name": "Execute",
+    "canonicalKey": "execute",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/api/commerce/jobs/:id/execute",
+      "/rotation/:id/execute"
+    ],
+    "sourceProjects": [
+      "AIPersonalWardrobeOrganizer",
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist",
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIPersonalWardrobeOrganizer",
+        "path": "backend/routes/extensions.js:344",
+        "route": "/rotation/:id/execute",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "cateringService",
+        "path": "backend/src/commerce/app.js:136",
+        "route": "/api/commerce/jobs/:id/execute",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Footer Html",
     "canonicalKey": "footer html",
     "aliases": [],
@@ -4659,7 +4446,6 @@
       "AIMenuDigitizer",
       "AIPersonalStylist",
       "AIPersonalWardrobeOrganizer",
-      "AIPricingOptimizer",
       "AiECommerceAgent",
       "AiRecipeMealPlanner",
       "GenericOrderingServiceEnhanced",
@@ -4671,8 +4457,6 @@
       "homeservices",
       "laundryServices",
       "localServiceDirectory",
-      "pestControl",
-      "petGrooming",
       "pos",
       "repairShop"
     ],
@@ -4686,22 +4470,70 @@
       "retail-commerce-consumer/marketplace-builder-platform",
       "retail-commerce-consumer/personal-stylist",
       "retail-commerce-consumer/pet-health-monitor",
-      "retail-commerce-consumer/pricing-optimizer",
       "retail-commerce-consumer/recipe-meal-planner",
       "retail-commerce-consumer/youth-sports-league-manager"
     ],
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "laundryServices",
-        "path": "backend/src/routes/auth.js:272",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/laundry-services"
+        "sourceProject": "AIFuneralHomeOperationsManager",
+        "path": "server/index.js:309",
+        "route": "/api/auth/forgot-password",
+        "originApp": "retail-commerce-consumer/funeral-home-operations-manager"
       },
       {
         "kind": "page",
+        "sourceProject": "GenericOrderingServiceEnhanced",
+        "path": "frontend/src/pages/ForgotPassword.jsx",
+        "route": "/ForgotPassword",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "OrderingServiceText2",
+        "path": "backend/routers/auth.py:50",
+        "route": "/forgot-password",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "OrderingServiceText2",
+        "path": "frontend/src/App.tsx:38",
+        "route": "/forgot-password",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "genericServiceOrder",
+        "path": "admin/routers/auth.py:129",
+        "route": "/forgot-password",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "genericServiceOrder",
+        "path": "frontend/src/App.tsx:29",
+        "route": "/forgot-password",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "OrderingServiceText2",
+        "path": "frontend/src/pages/auth/ForgotPasswordPage.tsx",
+        "route": "/auth/ForgotPasswordPage",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "genericServiceOrder",
+        "path": "frontend/src/pages/auth/ForgotPasswordPage.tsx",
+        "route": "/auth/ForgotPasswordPage",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
         "sourceProject": "laundryServices",
-        "path": "frontend/src/App.jsx:64",
+        "path": "backend/src/routes/auth.js:259",
         "route": "/forgot-password",
         "originApp": "retail-commerce-consumer/laundry-services"
       },
@@ -4749,71 +4581,15 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AIFuneralHomeOperationsManager",
-        "path": "server/index.js:325",
-        "route": "/api/auth/forgot-password",
-        "originApp": "retail-commerce-consumer/funeral-home-operations-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "frontend/src/pages/ForgotPassword.jsx",
-        "route": "/ForgotPassword",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/routers/auth.py:50",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "OrderingServiceText2",
-        "path": "frontend/src/App.tsx:38",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "admin/routers/auth.py:117",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "frontend/src/App.tsx:38",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "OrderingServiceText2",
-        "path": "frontend/src/pages/auth/ForgotPasswordPage.tsx",
-        "route": "/auth/ForgotPasswordPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "frontend/src/pages/auth/ForgotPasswordPage.tsx",
-        "route": "/auth/ForgotPasswordPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
         "sourceProject": "AIFitnessCoach",
-        "path": "server/routes/auth.js:151",
+        "path": "server/routes/auth.js:163",
         "route": "/forgot-password",
         "originApp": "retail-commerce-consumer/pet-health-monitor"
       },
       {
         "kind": "api",
         "sourceProject": "AIFitnessCoach",
-        "path": "server/routes/passwordReset.js:21",
+        "path": "server/routes/passwordReset.js:7",
         "route": "/forgot-password",
         "originApp": "retail-commerce-consumer/pet-health-monitor"
       },
@@ -4826,34 +4602,6 @@
       },
       {
         "kind": "page",
-        "sourceProject": "petGrooming",
-        "path": "src/app/auth/forgot-password/page.tsx",
-        "route": "/auth/forgot-password",
-        "originApp": "retail-commerce-consumer/pet-health-monitor"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "pestControl",
-        "path": "backend/src/routes/auth.js:131",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pestControl",
-        "path": "frontend/src/App.jsx:73",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pestControl",
-        "path": "frontend/src/pages/ForgotPassword.jsx",
-        "route": "/ForgotPassword",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "page",
         "sourceProject": "repairShop",
         "path": "src/app/forgot-password/page.tsx",
         "route": "/forgot-password",
@@ -4861,15 +4609,57 @@
       },
       {
         "kind": "api",
+        "sourceProject": "AIInventoryForecasting",
+        "path": "backend/src/routes/auth.js:218",
+        "route": "/forgot-password",
+        "originApp": "retail-commerce-consumer/inventory-forecasting"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "pos",
+        "path": "frontend/src/App.tsx:177",
+        "route": "/forgot-password",
+        "originApp": "retail-commerce-consumer/inventory-forecasting"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "pos",
+        "path": "frontend/src/pages/ForgotPassword.tsx",
+        "route": "/ForgotPassword",
+        "originApp": "retail-commerce-consumer/inventory-forecasting"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "pos",
+        "path": "src/routes/auth.ts:281",
+        "route": "/forgot-password",
+        "originApp": "retail-commerce-consumer/inventory-forecasting"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIEquipmentRentalPlatform",
+        "path": "backend/routes/auth.js:76",
+        "route": "/forgot-password",
+        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIMarketplaceBuilderPlatform",
+        "path": "server/index.js:158",
+        "route": "/api/auth/forgot-password",
+        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
+      },
+      {
+        "kind": "api",
         "sourceProject": "AIPersonalStylist",
-        "path": "backend/routes/auth.js:59",
+        "path": "backend/routes/auth.js:60",
         "route": "/forgot-password",
         "originApp": "retail-commerce-consumer/personal-stylist"
       },
       {
         "kind": "api",
         "sourceProject": "AIPersonalWardrobeOrganizer",
-        "path": "backend/routes/auth.js:52",
+        "path": "backend/routes/auth.js:53",
         "route": "/forgot-password",
         "originApp": "retail-commerce-consumer/personal-stylist"
       },
@@ -4896,55 +4686,6 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AIInventoryForecasting",
-        "path": "backend/src/routes/auth.js:198",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pos",
-        "path": "frontend/src/App.tsx:177",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pos",
-        "path": "frontend/src/pages/ForgotPassword.tsx",
-        "route": "/ForgotPassword",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pos",
-        "path": "src/routes/auth.ts:259",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIEquipmentRentalPlatform",
-        "path": "backend/routes/auth.js:76",
-        "route": "/forgot-password",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIMarketplaceBuilderPlatform",
-        "path": "server/index.js:148",
-        "route": "/api/auth/forgot-password",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIPricingOptimizer",
-        "path": "backend/server.js:473",
-        "route": "/api/auth/forgot-password",
-        "originApp": "retail-commerce-consumer/pricing-optimizer"
-      },
-      {
-        "kind": "api",
         "sourceProject": "ai-food-flow-order",
         "path": "server/src/routes/auth.ts:44",
         "route": "/forgot-password",
@@ -4953,7 +4694,7 @@
       {
         "kind": "page",
         "sourceProject": "footTruck",
-        "path": "frontend/src/App.jsx:61",
+        "path": "frontend/src/App.jsx:50",
         "route": "/forgot-password",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -4967,7 +4708,7 @@
       {
         "kind": "api",
         "sourceProject": "AIMenuDigitizer",
-        "path": "backend/src/routes/auth.ts:165",
+        "path": "backend/src/routes/auth.ts:166",
         "route": "/forgot-password",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       },
@@ -5098,6 +4839,32 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/suppliers.js:265",
         "route": "/purchase-orders/from-low-stock",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
+    "name": "Fulfill",
+    "canonicalKey": "fulfill",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/api/commerce/orders/:id/fulfill"
+    ],
+    "sourceProjects": [
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "cateringService",
+        "path": "backend/src/commerce/app.js:112",
+        "route": "/api/commerce/orders/:id/fulfill",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -5458,7 +5225,7 @@
   },
   {
     "name": "Gap No Dietaryrestrictionmapper Restrictions Ing",
-    "canonicalKey": "dietaryrestrictionmapper gap ing no restrictions",
+    "canonicalKey": "dietaryrestrictionmapper gap ing no restriction",
     "aliases": [],
     "kinds": [
       "page"
@@ -5594,7 +5361,7 @@
   },
   {
     "name": "Gap No Notifications For Shopping Reminders",
-    "canonicalKey": "for gap no notifications reminder shopping",
+    "canonicalKey": "for gap no notification reminder shopping",
     "aliases": [],
     "kinds": [
       "page"
@@ -5662,7 +5429,7 @@
   },
   {
     "name": "Gap No Recipe Ratingsreviews Route",
-    "canonicalKey": "gap no ratingsreviews recipe route",
+    "canonicalKey": "gap no ratingsreview recipe route",
     "aliases": [],
     "kinds": [
       "page"
@@ -6341,6 +6108,32 @@
     ]
   },
   {
+    "name": "Ingestions",
+    "canonicalKey": "ingestion",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/ingestions"
+    ],
+    "sourceProjects": [
+      "AIMenuDigitizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIMenuDigitizer",
+        "path": "backend/src/routes/menuWorkflow.ts:8",
+        "route": "/ingestions",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Ingredient Categories",
     "canonicalKey": "category ingredient",
     "aliases": [],
@@ -6367,10 +6160,10 @@
     ]
   },
   {
-    "name": "Ingredient Costs",
+    "name": "Ingredient Costs Page",
     "canonicalKey": "cost ingredient",
     "aliases": [
-      "Ingredient Costs Page"
+      "Ingredient Costs"
     ],
     "kinds": [
       "page"
@@ -6440,7 +6233,6 @@
     ],
     "routes": [
       "/Ingredients",
-      "/api/inventory/ingredients",
       "/api/recipes/:id/ingredients",
       "/ingredients",
       "/models/ingredient"
@@ -6450,12 +6242,10 @@
       "AiRecipeMealPlanner",
       "cateringService",
       "genericServiceOrder",
-      "independentRestaurant",
       "recipemanager"
     ],
     "consolidatedFromApps": [
       "retail-commerce-consumer/food-bank-pantry-manager",
-      "retail-commerce-consumer/food-flow-order",
       "retail-commerce-consumer/generic-ordering-service-enhanced",
       "retail-commerce-consumer/recipe-meal-planner"
     ],
@@ -6470,23 +6260,9 @@
       {
         "kind": "api",
         "sourceProject": "AIBakeryProductionManager",
-        "path": "backend/server.js:172",
+        "path": "backend/server.js:173",
         "route": "/api/recipes/:id/ingredients",
         "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "independentRestaurant",
-        "path": "src/lib/assistant-tools.ts:56",
-        "route": "/api/inventory/ingredients",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "independentRestaurant",
-        "path": "src/lib/assistant-tools.ts:80",
-        "route": "/api/inventory/ingredients",
-        "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "model",
@@ -6562,7 +6338,7 @@
   },
   {
     "name": "Ingredients Controller",
-    "canonicalKey": "controller ingredients",
+    "canonicalKey": "controller ingredient",
     "aliases": [],
     "kinds": [
       "page"
@@ -6582,32 +6358,6 @@
         "sourceProject": "recipemanager",
         "path": "app/controllers/ingredients_controller.rb",
         "route": "/controllers/ingredients_controller",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
-    "name": "Integrations Page",
-    "canonicalKey": "integrations",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/IntegrationsPage"
-    ],
-    "sourceProjects": [
-      "AIMenuDigitizer"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIMenuDigitizer",
-        "path": "frontend/src/pages/IntegrationsPage.tsx",
-        "route": "/IntegrationsPage",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -6726,20 +6476,6 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "Boulevard",
-        "path": "server/boulevard/routes/cart.ts:98",
-        "route": "/cart/:cartId/item/:itemId",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "laundryServices",
-        "path": "backend/src/routes/orders.js:458",
-        "route": "/:id/items/:itemId",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
         "sourceProject": "GenericOrderingServiceEnhanced",
         "path": "backend/app/routers/items.py:132",
         "route": "/{item_id}",
@@ -6779,6 +6515,20 @@
         "path": "backend/routers/menu_items.py:48",
         "route": "/{item_id}",
         "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "Boulevard",
+        "path": "server/boulevard/routes/cart.ts:98",
+        "route": "/cart/:cartId/item/:itemId",
+        "originApp": "retail-commerce-consumer/laundry-services"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "laundryServices",
+        "path": "backend/src/routes/orders.js:457",
+        "route": "/:id/items/:itemId",
+        "originApp": "retail-commerce-consumer/laundry-services"
       },
       {
         "kind": "api",
@@ -6889,8 +6639,7 @@
     ],
     "routes": [
       "/Kitchen",
-      "/kitchen",
-      "kitchen"
+      "/kitchen"
     ],
     "sourceProjects": [
       "cateringService",
@@ -6907,13 +6656,6 @@
         "path": "src/app/(dashboard)/kitchen/page.tsx",
         "route": "/kitchen",
         "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:87",
-        "route": "kitchen",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
       },
       {
         "kind": "page",
@@ -7149,34 +6891,8 @@
     ]
   },
   {
-    "name": "Locations Page",
-    "canonicalKey": "locations",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/LocationsPage"
-    ],
-    "sourceProjects": [
-      "AIMenuDigitizer"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIMenuDigitizer",
-        "path": "frontend/src/pages/LocationsPage.tsx",
-        "route": "/LocationsPage",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
     "name": "Logins Controller",
-    "canonicalKey": "controller logins",
+    "canonicalKey": "controller login",
     "aliases": [],
     "kinds": [
       "page"
@@ -7208,8 +6924,7 @@
       "page"
     ],
     "routes": [
-      "/Logistics",
-      "logistics"
+      "/Logistics"
     ],
     "sourceProjects": [
       "cateringService"
@@ -7218,13 +6933,6 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:88",
-        "route": "logistics",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
       {
         "kind": "page",
         "sourceProject": "cateringService",
@@ -7338,6 +7046,32 @@
         "sourceProject": "AiRecipeMealPlanner",
         "path": "frontend/src/components/Sidebar.js:21",
         "route": "",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
+    "name": "Meal Advice",
+    "canonicalKey": "advice meal",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/meal-advice"
+    ],
+    "sourceProjects": [
+      "AiRecipeMealPlanner"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "backend/routes/governedAI.js:12",
+        "route": "/meal-advice",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -7699,7 +7433,7 @@
   },
   {
     "name": "Menu Items Report",
-    "canonicalKey": "items menu report",
+    "canonicalKey": "item menu report",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -7922,7 +7656,7 @@
   },
   {
     "name": "Messages Html",
-    "canonicalKey": "html messages",
+    "canonicalKey": "html message",
     "aliases": [],
     "kinds": [
       "page"
@@ -7974,14 +7708,12 @@
   },
   {
     "name": "Notifications Sms Confirmations",
-    "canonicalKey": "confirmation notifications sms",
+    "canonicalKey": "confirmation notification sms",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/batch09/gap-nonai/notifications-sms-confirmations",
       "/notifications-sms-confirmations"
     ],
     "sourceProjects": [
@@ -7997,19 +7729,12 @@
         "path": "backend/src/routes/batch09GapNonai.js:110",
         "route": "/notifications-sms-confirmations",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:118",
-        "route": "/batch09/gap-nonai/notifications-sms-confirmations",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
   },
   {
     "name": "Notifications Sms Confirmations Gap Non",
-    "canonicalKey": "confirmations gap non notifications sms",
+    "canonicalKey": "confirmation gap non notification sms",
     "aliases": [],
     "kinds": [
       "page"
@@ -8108,7 +7833,7 @@
       {
         "kind": "page",
         "sourceProject": "AIBakeryProductionManager",
-        "path": "frontend/src/App.jsx:519",
+        "path": "frontend/src/App.jsx:520",
         "route": "/ai/nutrition",
         "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
       },
@@ -8608,7 +8333,7 @@
   },
   {
     "name": "Pages Controller",
-    "canonicalKey": "controller pages",
+    "canonicalKey": "controller page",
     "aliases": [],
     "kinds": [
       "page"
@@ -8691,13 +8416,6 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "AITattooBodyArtStudioManager",
-        "path": "server/routes/consent.js:57",
-        "route": "/:id/pdf",
-        "originApp": "retail-commerce-consumer/tattoo-body-art-studio-manager"
-      },
-      {
-        "kind": "api",
         "sourceProject": "GenericOrderingServiceEnhanced",
         "path": "backend/app/routers/export.py:119",
         "route": "/items/pdf",
@@ -8723,6 +8441,27 @@
         "path": "admin/routers/export.py:50",
         "route": "/pdf",
         "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITattooBodyArtStudioManager",
+        "path": "server/routes/consent.js:57",
+        "route": "/:id/pdf",
+        "originApp": "retail-commerce-consumer/tattoo-body-art-studio-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIPawnShopSecondhandDealer",
+        "path": "server/routes/receipts.js:88",
+        "route": "/:id/pdf",
+        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIInventoryForecasting",
+        "path": "backend/src/routes/export.js:66",
+        "route": "/:resource/pdf",
+        "originApp": "retail-commerce-consumer/inventory-forecasting"
       },
       {
         "kind": "api",
@@ -8754,20 +8493,6 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AIInventoryForecasting",
-        "path": "backend/src/routes/export.js:66",
-        "route": "/:resource/pdf",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIPawnShopSecondhandDealer",
-        "path": "server/routes/receipts.js:88",
-        "route": "/:id/pdf",
-        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
-      },
-      {
-        "kind": "api",
         "sourceProject": "AIBakeryProductionManager",
         "path": "backend/routes/customViews.js:218",
         "route": "/recipe/:id/pdf",
@@ -8776,7 +8501,7 @@
       {
         "kind": "api",
         "sourceProject": "AIBakeryProductionManager",
-        "path": "backend/server.js:418",
+        "path": "backend/server.js:419",
         "route": "/api/production/:date/sheet/pdf",
         "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
       },
@@ -8790,63 +8515,49 @@
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/events.js:687",
+        "path": "backend/src/routes/events.js:686",
         "route": "/export/pdf",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/financial.js:653",
+        "path": "backend/src/routes/financial.js:652",
         "route": "/truck/:truckId/sales/export/pdf",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/financial.js:682",
+        "path": "backend/src/routes/financial.js:681",
         "route": "/truck/:truckId/expenses/export/pdf",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/inventory.js:291",
+        "path": "backend/src/routes/inventory.js:375",
         "route": "/truck/:truckId/export/pdf",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/locations.js:315",
+        "path": "backend/src/routes/locations.js:314",
         "route": "/export/pdf",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/menus.js:436",
+        "path": "backend/src/routes/menus.js:475",
         "route": "/truck/:truckId/export/pdf",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/orders.js:548",
-        "route": "/truck/:truckId/export/pdf",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "footTruck",
-        "path": "backend/src/routes/permits.js:312",
-        "route": "/truck/:truckId/export/pdf",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "footTruck",
-        "path": "backend/src/routes/social.js:354",
+        "path": "backend/src/routes/permits.js:311",
         "route": "/truck/:truckId/export/pdf",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -9140,32 +8851,6 @@
     ]
   },
   {
-    "name": "Predictive Menu Success By Client Profile Cuisine",
-    "canonicalKey": "by client cuisine menu predictive profile success",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/batch09/cfs/predictive-menu-success-by-client-profile-cuisine"
-    ],
-    "sourceProjects": [
-      "cateringService"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:102",
-        "route": "/batch09/cfs/predictive-menu-success-by-client-profile-cuisine",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
     "name": "Predictive Menu Success By Client Profile Cuisine Cfs",
     "canonicalKey": "by cfs client cuisine menu predictive profile success",
     "aliases": [],
@@ -9192,34 +8877,8 @@
     ]
   },
   {
-    "name": "Predictive Staffing Labor Hours By Event Size",
-    "canonicalKey": "by event hours labor predictive size staffing",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/batch09/cfs/predictive-staffing-labor-hours-by-event-size"
-    ],
-    "sourceProjects": [
-      "cateringService"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:106",
-        "route": "/batch09/cfs/predictive-staffing-labor-hours-by-event-size",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
     "name": "Predictive Staffing Labor Hours By Event Size Cfs",
-    "canonicalKey": "by cfs event hours labor predictive size staffing",
+    "canonicalKey": "by cfs event hour labor predictive size staffing",
     "aliases": [],
     "kinds": [
       "page"
@@ -9269,14 +8928,14 @@
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/inventory.js:320",
+        "path": "backend/src/routes/inventory.js:404",
         "route": "/truck/:truckId/prep",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/inventory.js:355",
+        "path": "backend/src/routes/inventory.js:439",
         "route": "/prep",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -9433,25 +9092,28 @@
     "canonicalKey": "proposal",
     "aliases": [],
     "kinds": [
+      "api",
       "page"
     ],
     "routes": [
       "/Proposals",
-      "proposals"
+      "/proposals"
     ],
     "sourceProjects": [
+      "AIInventoryForecasting",
       "cateringService"
     ],
     "consolidatedFromApps": [
+      "retail-commerce-consumer/inventory-forecasting",
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
       {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:85",
-        "route": "proposals",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+        "kind": "api",
+        "sourceProject": "AIInventoryForecasting",
+        "path": "backend/src/routes/governedForecasting.js:149",
+        "route": "/proposals",
+        "originApp": "retail-commerce-consumer/inventory-forecasting"
       },
       {
         "kind": "page",
@@ -9490,14 +9152,14 @@
       {
         "kind": "api",
         "sourceProject": "AIPhotographyBusinessManager",
-        "path": "backend/routes/ai.js:432",
+        "path": "backend/routes/ai.js:407",
         "route": "/galleries/:id/public",
         "originApp": "retail-commerce-consumer/cemetery-memorial-park-manager"
       },
       {
         "kind": "api",
         "sourceProject": "AIMarketplaceBuilderPlatform",
-        "path": "server/index.js:192",
+        "path": "server/index.js:202",
         "route": "/api/templates/public",
         "originApp": "retail-commerce-consumer/marketplace-builder-platform"
       },
@@ -9682,6 +9344,61 @@
     ]
   },
   {
+    "name": "Readiness",
+    "canonicalKey": "readiness",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/api/runtime-ai/readiness",
+      "/integrations/readiness",
+      "/providers/readiness"
+    ],
+    "sourceProjects": [
+      "AIInventoryForecasting",
+      "AIPricingOptimizer",
+      "AITravelItineraryPlanner",
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/classifytravelersecurity",
+      "retail-commerce-consumer/inventory-forecasting",
+      "retail-commerce-consumer/pricing-optimizer",
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIInventoryForecasting",
+        "path": "backend/src/routes/governedForecasting.js:42",
+        "route": "/integrations/readiness",
+        "originApp": "retail-commerce-consumer/inventory-forecasting"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIPricingOptimizer",
+        "path": "backend/routes/governedPricing.js:47",
+        "route": "/providers/readiness",
+        "originApp": "retail-commerce-consumer/pricing-optimizer"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITravelItineraryPlanner",
+        "path": "backend/src/routes/governedTravel.js:2",
+        "route": "/providers/readiness",
+        "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "cateringService",
+        "path": "backend/src/commerce/app.js:57",
+        "route": "/api/runtime-ai/readiness",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Recipe Ingredient",
     "canonicalKey": "ingredient recipe",
     "aliases": [],
@@ -9789,6 +9506,7 @@
       "/RecipeDetail",
       "/Recipes",
       "/api/recipes",
+      "/menu-items/:menuItemId/recipe",
       "/models/recipe",
       "/recipes"
     ],
@@ -9798,6 +9516,7 @@
       "AIGhostKitchenNetworkManager",
       "AiRecipeMealPlanner",
       "cateringService",
+      "footTruck",
       "independentRestaurant",
       "recipemanager"
     ],
@@ -9810,7 +9529,7 @@
       {
         "kind": "api",
         "sourceProject": "AIBakeryProductionManager",
-        "path": "backend/server.js:54",
+        "path": "backend/server.js:55",
         "route": "/api/recipes",
         "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
       },
@@ -9824,7 +9543,7 @@
       {
         "kind": "page",
         "sourceProject": "AIBakeryProductionManager",
-        "path": "frontend/src/App.jsx:496",
+        "path": "frontend/src/App.jsx:497",
         "route": "/recipes",
         "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
       },
@@ -9878,9 +9597,23 @@
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
+        "kind": "api",
+        "sourceProject": "footTruck",
+        "path": "backend/src/routes/inventory.js:50",
+        "route": "/menu-items/:menuItemId/recipe",
+        "originApp": "retail-commerce-consumer/food-flow-order"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "footTruck",
+        "path": "backend/src/routes/inventory.js:59",
+        "route": "/menu-items/:menuItemId/recipe",
+        "originApp": "retail-commerce-consumer/food-flow-order"
+      },
+      {
         "kind": "navigation",
         "sourceProject": "independentRestaurant",
-        "path": "src/components/layout/sidebar.tsx:40",
+        "path": "src/components/layout/sidebar.tsx:38",
         "route": "",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -9889,20 +9622,6 @@
         "sourceProject": "independentRestaurant",
         "path": "src/app/(dashboard)/recipes/page.tsx",
         "route": "/recipes",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "independentRestaurant",
-        "path": "src/lib/assistant-tools.ts:59",
-        "route": "/api/recipes",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "independentRestaurant",
-        "path": "src/lib/assistant-tools.ts:83",
-        "route": "/api/recipes",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
@@ -10000,7 +9719,7 @@
   },
   {
     "name": "Recipes Controller",
-    "canonicalKey": "controller recipes",
+    "canonicalKey": "controller recipe",
     "aliases": [],
     "kinds": [
       "page"
@@ -10051,15 +9770,85 @@
     ]
   },
   {
+    "name": "Reconciliation",
+    "canonicalKey": "reconciliation",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/api/commerce/reconciliation",
+      "/reconciliation"
+    ],
+    "sourceProjects": [
+      "GenericOrderingServiceEnhanced",
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/generic-ordering-service-enhanced",
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "GenericOrderingServiceEnhanced",
+        "path": "backend/app/routers/payments.py:85",
+        "route": "/reconciliation",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "cateringService",
+        "path": "backend/src/commerce/app.js:148",
+        "route": "/api/commerce/reconciliation",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
+    "name": "Recover",
+    "canonicalKey": "recover",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/:id/recover",
+      "/api/commerce/orders/:id/recover"
+    ],
+    "sourceProjects": [
+      "cateringService",
+      "footTruck"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/food-flow-order",
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "footTruck",
+        "path": "backend/src/routes/orders.js:289",
+        "route": "/:id/recover",
+        "originApp": "retail-commerce-consumer/food-flow-order"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "cateringService",
+        "path": "backend/src/commerce/app.js:134",
+        "route": "/api/commerce/orders/:id/recover",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Recurring Corporate Account Agreements",
     "canonicalKey": "account agreement corporate recurring",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/batch09/gap-nonai/recurring-corporate-account-agreements",
       "/recurring-corporate-account-agreements"
     ],
     "sourceProjects": [
@@ -10075,19 +9864,12 @@
         "path": "backend/src/routes/batch09GapNonai.js:97",
         "route": "/recurring-corporate-account-agreements",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:117",
-        "route": "/batch09/gap-nonai/recurring-corporate-account-agreements",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
   },
   {
     "name": "Recurring Corporate Account Agreements Gap Non",
-    "canonicalKey": "account agreements corporate gap non recurring",
+    "canonicalKey": "account agreement corporate gap non recurring",
     "aliases": [],
     "kinds": [
       "page"
@@ -10112,6 +9894,42 @@
     ]
   },
   {
+    "name": "Reserve",
+    "canonicalKey": "reserve",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/api/commerce/orders/:id/reserve",
+      "/reserve"
+    ],
+    "sourceProjects": [
+      "AIFoodBankPantryManager",
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/food-bank-pantry-manager",
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIFoodBankPantryManager",
+        "path": "backend/routes/clientMobileApp.js:6",
+        "route": "/reserve",
+        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "cateringService",
+        "path": "backend/src/commerce/app.js:101",
+        "route": "/api/commerce/orders/:id/reserve",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Reset Password",
     "canonicalKey": "password reset",
     "aliases": [
@@ -10129,7 +9947,6 @@
       "/PasswordResets",
       "/ResetPassword",
       "/api/auth/reset-password",
-      "/api/password-resets",
       "/auth/ResetPasswordPage",
       "/auth/reset-password",
       "/password-reset",
@@ -10156,10 +9973,9 @@
       "footTruck",
       "genericServiceOrder",
       "homeservices",
+      "independentRestaurant",
       "laundryServices",
       "localServiceDirectory",
-      "pestControl",
-      "petGrooming",
       "pos",
       "repairShop"
     ],
@@ -10180,8 +9996,43 @@
     "evidence": [
       {
         "kind": "api",
+        "sourceProject": "AIFuneralHomeOperationsManager",
+        "path": "server/index.js:337",
+        "route": "/api/auth/reset-password",
+        "originApp": "retail-commerce-consumer/funeral-home-operations-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "OrderingServiceText2",
+        "path": "backend/routers/auth.py:61",
+        "route": "/reset-password",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "genericServiceOrder",
+        "path": "admin/routers/auth.py:142",
+        "route": "/reset-password",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "OrderingServiceText2",
+        "path": "frontend/src/pages/auth/ResetPasswordPage.tsx",
+        "route": "/auth/ResetPasswordPage",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "genericServiceOrder",
+        "path": "frontend/src/pages/auth/ResetPasswordPage.tsx",
+        "route": "/auth/ResetPasswordPage",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "api",
         "sourceProject": "laundryServices",
-        "path": "backend/src/routes/auth.js:303",
+        "path": "backend/src/routes/auth.js:290",
         "route": "/reset-password",
         "originApp": "retail-commerce-consumer/laundry-services"
       },
@@ -10222,66 +10073,17 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AIFuneralHomeOperationsManager",
-        "path": "server/index.js:353",
-        "route": "/api/auth/reset-password",
-        "originApp": "retail-commerce-consumer/funeral-home-operations-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/routers/auth.py:61",
-        "route": "/reset-password",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "admin/routers/auth.py:130",
-        "route": "/reset-password",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "OrderingServiceText2",
-        "path": "frontend/src/pages/auth/ResetPasswordPage.tsx",
-        "route": "/auth/ResetPasswordPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "frontend/src/pages/auth/ResetPasswordPage.tsx",
-        "route": "/auth/ResetPasswordPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
         "sourceProject": "AIFitnessCoach",
-        "path": "server/routes/auth.js:182",
+        "path": "server/routes/auth.js:193",
         "route": "/reset-password",
         "originApp": "retail-commerce-consumer/pet-health-monitor"
       },
       {
         "kind": "api",
         "sourceProject": "AIFitnessCoach",
-        "path": "server/routes/passwordReset.js:100",
+        "path": "server/routes/passwordReset.js:84",
         "route": "/reset-password",
         "originApp": "retail-commerce-consumer/pet-health-monitor"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "petGrooming",
-        "path": "src/app/auth/reset-password/page.tsx",
-        "route": "/auth/reset-password",
-        "originApp": "retail-commerce-consumer/pet-health-monitor"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "pestControl",
-        "path": "backend/src/routes/auth.js:169",
-        "route": "/reset-password",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
       },
       {
         "kind": "page",
@@ -10289,27 +10091,6 @@
         "path": "src/app/reset-password/page.tsx",
         "route": "/reset-password",
         "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIPersonalStylist",
-        "path": "backend/routes/auth.js:90",
-        "route": "/reset-password",
-        "originApp": "retail-commerce-consumer/personal-stylist"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIPersonalWardrobeOrganizer",
-        "path": "backend/routes/auth.js:66",
-        "route": "/reset-password",
-        "originApp": "retail-commerce-consumer/personal-stylist"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AiECommerceAgent",
-        "path": "backend/src/routes/aiExtra.js:80",
-        "route": "/auth/reset-password",
-        "originApp": "retail-commerce-consumer/personal-stylist"
       },
       {
         "kind": "page",
@@ -10328,7 +10109,7 @@
       {
         "kind": "api",
         "sourceProject": "AIInventoryForecasting",
-        "path": "backend/src/routes/auth.js:232",
+        "path": "backend/src/routes/auth.js:251",
         "route": "/reset-password",
         "originApp": "retail-commerce-consumer/inventory-forecasting"
       },
@@ -10349,7 +10130,7 @@
       {
         "kind": "page",
         "sourceProject": "pos",
-        "path": "src/routes/auth.ts:300",
+        "path": "src/routes/auth.ts:322",
         "route": "/reset-password",
         "originApp": "retail-commerce-consumer/inventory-forecasting"
       },
@@ -10363,23 +10144,30 @@
       {
         "kind": "api",
         "sourceProject": "AIMarketplaceBuilderPlatform",
-        "path": "server/index.js:171",
+        "path": "server/index.js:181",
         "route": "/api/auth/reset-password",
         "originApp": "retail-commerce-consumer/marketplace-builder-platform"
       },
       {
         "kind": "api",
-        "sourceProject": "AIPricingOptimizer",
-        "path": "backend/server.js:3216",
-        "route": "/api/password-resets",
-        "originApp": "retail-commerce-consumer/pricing-optimizer"
+        "sourceProject": "AIPersonalStylist",
+        "path": "backend/routes/auth.js:65",
+        "route": "/reset-password",
+        "originApp": "retail-commerce-consumer/personal-stylist"
       },
       {
         "kind": "api",
-        "sourceProject": "AIPricingOptimizer",
-        "path": "backend/server.js:544",
-        "route": "/api/password-resets",
-        "originApp": "retail-commerce-consumer/pricing-optimizer"
+        "sourceProject": "AIPersonalWardrobeOrganizer",
+        "path": "backend/routes/auth.js:58",
+        "route": "/reset-password",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiECommerceAgent",
+        "path": "backend/src/routes/aiExtra.js:80",
+        "route": "/auth/reset-password",
+        "originApp": "retail-commerce-consumer/personal-stylist"
       },
       {
         "kind": "page",
@@ -10411,13 +10199,6 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AIPricingOptimizer",
-        "path": "backend/server.js:507",
-        "route": "/api/auth/reset-password",
-        "originApp": "retail-commerce-consumer/pricing-optimizer"
-      },
-      {
-        "kind": "api",
         "sourceProject": "ai-food-flow-order",
         "path": "server/src/routes/auth.ts:45",
         "route": "/reset-password",
@@ -10426,7 +10207,7 @@
       {
         "kind": "page",
         "sourceProject": "footTruck",
-        "path": "frontend/src/App.jsx:62",
+        "path": "frontend/src/App.jsx:51",
         "route": "/reset-password",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
@@ -10438,9 +10219,16 @@
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
+        "kind": "page",
+        "sourceProject": "independentRestaurant",
+        "path": "src/app/reset-password/page.tsx",
+        "route": "/reset-password",
+        "originApp": "retail-commerce-consumer/food-flow-order"
+      },
+      {
         "kind": "api",
         "sourceProject": "AIMenuDigitizer",
-        "path": "backend/src/routes/auth.ts:198",
+        "path": "backend/src/routes/auth.ts:199",
         "route": "/reset-password",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       },
@@ -10924,6 +10712,32 @@
     ]
   },
   {
+    "name": "Sso",
+    "canonicalKey": "sso",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/api/auth/sso"
+    ],
+    "sourceProjects": [
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "cateringService",
+        "path": "backend/src/commerce/app.js:31",
+        "route": "/api/auth/sso",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Star",
     "canonicalKey": "star",
     "aliases": [],
@@ -10999,7 +10813,7 @@
   },
   {
     "name": "Styles Controller",
-    "canonicalKey": "controller styles",
+    "canonicalKey": "controller style",
     "aliases": [],
     "kinds": [
       "page"
@@ -11038,11 +10852,9 @@
     "sourceProjects": [
       "AIFuneralMemorialCreator",
       "AiECommerceAgent",
-      "cateringService",
-      "footTruck"
+      "cateringService"
     ],
     "consolidatedFromApps": [
-      "retail-commerce-consumer/food-flow-order",
       "retail-commerce-consumer/funeral-home-operations-manager",
       "retail-commerce-consumer/personal-stylist",
       "retail-commerce-consumer/recipe-meal-planner"
@@ -11061,13 +10873,6 @@
         "path": "backend/src/routes/index.js:218",
         "route": "/products/search/suggest",
         "originApp": "retail-commerce-consumer/personal-stylist"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "footTruck",
-        "path": "backend/src/routes/dynamicPricing.js:19",
-        "route": "/suggest",
-        "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "api",
@@ -11131,32 +10936,6 @@
     ]
   },
   {
-    "name": "Supplier Auto Ordering Integration",
-    "canonicalKey": "auto integration ordering supplier",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/batch09/cfs/supplier-auto-ordering-integration"
-    ],
-    "sourceProjects": [
-      "cateringService"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:108",
-        "route": "/batch09/cfs/supplier-auto-ordering-integration",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
     "name": "Supplier Auto Ordering Integration Cfs",
     "canonicalKey": "auto cfs integration ordering supplier",
     "aliases": [],
@@ -11213,11 +10992,9 @@
     "canonicalKey": "scorecard sla supplier tracking",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/batch09/gap-nonai/supplier-sla-scorecard-tracking",
       "/supplier-sla-scorecard-tracking"
     ],
     "sourceProjects": [
@@ -11232,13 +11009,6 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/batch09GapNonai.js:71",
         "route": "/supplier-sla-scorecard-tracking",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:115",
-        "route": "/batch09/gap-nonai/supplier-sla-scorecard-tracking",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -11300,11 +11070,9 @@
     "canonicalKey": "event scheduling tasting",
     "aliases": [],
     "kinds": [
-      "api",
-      "page"
+      "api"
     ],
     "routes": [
-      "/batch09/gap-nonai/tasting-event-scheduling",
       "/tasting-event-scheduling"
     ],
     "sourceProjects": [
@@ -11319,13 +11087,6 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/batch09GapNonai.js:84",
         "route": "/tasting-event-scheduling",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:116",
-        "route": "/batch09/gap-nonai/tasting-event-scheduling",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -11390,6 +11151,42 @@
     ]
   },
   {
+    "name": "Toggle",
+    "canonicalKey": "toggle",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/:id/items/:itemId/toggle",
+      "/prep/item/:id/toggle"
+    ],
+    "sourceProjects": [
+      "AiRecipeMealPlanner",
+      "footTruck"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/food-flow-order",
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "footTruck",
+        "path": "backend/src/routes/inventory.js:487",
+        "route": "/prep/item/:id/toggle",
+        "originApp": "retail-commerce-consumer/food-flow-order"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "backend/routes/groceryLists.js:91",
+        "route": "/:id/items/:itemId/toggle",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Translate",
     "canonicalKey": "translate",
     "aliases": [],
@@ -11410,17 +11207,17 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "AIMenuDigitizer",
-        "path": "backend/src/routes/ai.ts:36",
-        "route": "/translate",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "api",
         "sourceProject": "AITravelItineraryPlanner",
         "path": "backend/src/routes/ai.js:355",
         "route": "/translate",
         "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIMenuDigitizer",
+        "path": "backend/src/routes/ai.ts:36",
+        "route": "/translate",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
   },
@@ -11654,50 +11451,6 @@
     ]
   },
   {
-    "name": "Venues",
-    "canonicalKey": "venue",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/Venues",
-      "/venues",
-      "venues"
-    ],
-    "sourceProjects": [
-      "AIFuneralMemorialCreator",
-      "cateringService"
-    ],
-    "consolidatedFromApps": [
-      "retail-commerce-consumer/funeral-home-operations-manager",
-      "retail-commerce-consumer/recipe-meal-planner"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIFuneralMemorialCreator",
-        "path": "client/src/pages/Dashboard.jsx:137",
-        "route": "/venues",
-        "originApp": "retail-commerce-consumer/funeral-home-operations-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/App.jsx:83",
-        "route": "venues",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/pages/Venues.jsx",
-        "route": "/Venues",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      }
-    ]
-  },
-  {
     "name": "Verify Email",
     "canonicalKey": "email verify",
     "aliases": [
@@ -11709,14 +11462,12 @@
     ],
     "routes": [
       "/VerifyEmail",
-      "/api/auth/verify-email",
       "/auth/VerifyEmailPage",
       "/verify-email"
     ],
     "sourceProjects": [
       "AIFitnessCoach",
       "AIMenuDigitizer",
-      "AIPricingOptimizer",
       "AIProductPhotoEnhancer",
       "AiRecipeMealPlanner",
       "OrderingServiceText2",
@@ -11735,14 +11486,27 @@
       "retail-commerce-consumer/laundry-services",
       "retail-commerce-consumer/local-service-directory",
       "retail-commerce-consumer/pet-health-monitor",
-      "retail-commerce-consumer/pricing-optimizer",
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
       {
+        "kind": "page",
+        "sourceProject": "OrderingServiceText2",
+        "path": "frontend/src/pages/auth/VerifyEmailPage.tsx",
+        "route": "/auth/VerifyEmailPage",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "genericServiceOrder",
+        "path": "frontend/src/pages/auth/VerifyEmailPage.tsx",
+        "route": "/auth/VerifyEmailPage",
+        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
+      },
+      {
         "kind": "api",
         "sourceProject": "laundryServices",
-        "path": "backend/src/routes/auth.js:341",
+        "path": "backend/src/routes/auth.js:328",
         "route": "/verify-email",
         "originApp": "retail-commerce-consumer/laundry-services"
       },
@@ -11761,23 +11525,9 @@
         "originApp": "retail-commerce-consumer/local-service-directory"
       },
       {
-        "kind": "page",
-        "sourceProject": "OrderingServiceText2",
-        "path": "frontend/src/pages/auth/VerifyEmailPage.tsx",
-        "route": "/auth/VerifyEmailPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "frontend/src/pages/auth/VerifyEmailPage.tsx",
-        "route": "/auth/VerifyEmailPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
         "kind": "api",
         "sourceProject": "AIFitnessCoach",
-        "path": "server/routes/auth.js:215",
+        "path": "server/routes/auth.js:226",
         "route": "/verify-email",
         "originApp": "retail-commerce-consumer/pet-health-monitor"
       },
@@ -11804,22 +11554,15 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AIPricingOptimizer",
-        "path": "backend/server.js:590",
-        "route": "/api/auth/verify-email",
-        "originApp": "retail-commerce-consumer/pricing-optimizer"
-      },
-      {
-        "kind": "api",
         "sourceProject": "footTruck",
-        "path": "backend/src/routes/auth.js:192",
+        "path": "backend/src/routes/auth.js:200",
         "route": "/verify-email",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
       {
         "kind": "page",
         "sourceProject": "footTruck",
-        "path": "frontend/src/App.jsx:63",
+        "path": "frontend/src/App.jsx:52",
         "route": "/verify-email",
         "originApp": "retail-commerce-consumer/food-flow-order"
       },
