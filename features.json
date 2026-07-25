@@ -40,10 +40,12 @@
     "canonicalKey": "adjust dietary",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
-      "/adjust-dietary"
+      "/adjust-dietary",
+      "/dietary-profiles?tool=adjust-dietary"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -52,6 +54,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/DietaryProfiles.js:407",
+        "route": "/dietary-profiles?tool=adjust-dietary",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -138,9 +147,11 @@
     "canonicalKey": "ai delivery optimization route",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/Batch09/AiDeliveryRouteOptimizationGapAi",
       "/ai-delivery-route-optimization"
     ],
     "sourceProjects": [
@@ -150,6 +161,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "cateringService",
+        "path": "frontend/src/pages/Batch09/AiDeliveryRouteOptimizationGapAi.jsx:1",
+        "route": "/Batch09/AiDeliveryRouteOptimizationGapAi",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "cateringService",
@@ -190,9 +208,11 @@
     "canonicalKey": "ai dietary restriction substitution suggestion",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/Batch09/AiDietaryRestrictionSubstitutionSuggestionsGapAi",
       "/ai-dietary-restriction-substitution-suggestions"
     ],
     "sourceProjects": [
@@ -202,6 +222,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "cateringService",
+        "path": "frontend/src/pages/Batch09/AiDietaryRestrictionSubstitutionSuggestionsGapAi.jsx:1",
+        "route": "/Batch09/AiDietaryRestrictionSubstitutionSuggestionsGapAi",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "cateringService",
@@ -242,9 +269,11 @@
     "canonicalKey": "ai by client menu prediction profile success",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/Batch09/AiMenuSuccessPredictionByClientProfileGapAi",
       "/ai-menu-success-prediction-by-client-profile"
     ],
     "sourceProjects": [
@@ -254,6 +283,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "cateringService",
+        "path": "frontend/src/pages/Batch09/AiMenuSuccessPredictionByClientProfileGapAi.jsx:1",
+        "route": "/Batch09/AiMenuSuccessPredictionByClientProfileGapAi",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "cateringService",
@@ -294,9 +330,11 @@
     "canonicalKey": "ai conversion modeling proposal to win",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/Batch09/AiProposalToWinConversionModelingGapAi",
       "/ai-proposal-to-win-conversion-modeling"
     ],
     "sourceProjects": [
@@ -306,6 +344,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "cateringService",
+        "path": "frontend/src/pages/Batch09/AiProposalToWinConversionModelingGapAi.jsx:1",
+        "route": "/Batch09/AiProposalToWinConversionModelingGapAi",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "cateringService",
@@ -346,12 +391,14 @@
     "canonicalKey": "allergen detection",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
       "/AllergenDetection",
-      "/allergen-detection"
+      "/allergen-detection",
+      "/allergen-detection?tool=allergen-detection"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -360,6 +407,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/AllergenDetection.js:60",
+        "route": "/allergen-detection?tool=allergen-detection",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -414,10 +468,12 @@
     "canonicalKey": "analyze nutrition",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
-      "/analyze-nutrition"
+      "/analyze-nutrition",
+      "/nutrition?tool=analyze-nutrition"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -426,6 +482,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/Nutrition.js:347",
+        "route": "/nutrition?tool=analyze-nutrition",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -558,6 +621,41 @@
         "sourceProject": "cateringService",
         "path": "backend/src/routes/staff.js:216",
         "route": "/assignments",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
+    "name": "Balance Nutrition",
+    "canonicalKey": "balance nutrition",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "api"
+    ],
+    "routes": [
+      "/balance-nutrition",
+      "/nutrition-balances?tool=balance-nutrition"
+    ],
+    "sourceProjects": [
+      "AiRecipeMealPlanner"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/NutritionBalances.js:384",
+        "route": "/nutrition-balances?tool=balance-nutrition",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "backend/routes/ai.js:34",
+        "route": "/balance-nutrition",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -700,13 +798,15 @@
     "canonicalKey": "budget optimizer",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "navigation",
       "page"
     ],
     "routes": [
       "/BudgetOptimizer",
-      "/budget-optimizer"
+      "/budget-optimizer",
+      "/budget-optimizer?tool=budget-optimizer"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -715,6 +815,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/BudgetOptimizer.js:46",
+        "route": "/budget-optimizer?tool=budget-optimizer",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -2802,6 +2909,41 @@
     ]
   },
   {
+    "name": "Chat",
+    "canonicalKey": "chat",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "api"
+    ],
+    "routes": [
+      "/AIAssistant",
+      "/chat"
+    ],
+    "sourceProjects": [
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "cateringService",
+        "path": "frontend/src/pages/AIAssistant.jsx:1",
+        "route": "/AIAssistant",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "cateringService",
+        "path": "backend/src/routes/ai.js:161",
+        "route": "/chat",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Check Password Strength",
     "canonicalKey": "check password strength",
     "aliases": [],
@@ -3034,11 +3176,9 @@
     "name": "Cooking Timers",
     "canonicalKey": "cooking timer",
     "aliases": [
-      "Cooking Timer Detail",
-      "Create Cooking Timer"
+      "Cooking Timer Detail"
     ],
     "kinds": [
-      "api",
       "model",
       "navigation",
       "page"
@@ -3046,8 +3186,7 @@
     "routes": [
       "/CookingTimerDetail",
       "/CookingTimers",
-      "/cooking-timers",
-      "/create-cooking-timer"
+      "/cooking-timers"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -3118,13 +3257,6 @@
         "path": "frontend/src/pages/Dashboard.js:147",
         "route": "/cooking-timers",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AiRecipeMealPlanner",
-        "path": "backend/routes/ai.js:37",
-        "route": "/create-cooking-timer",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
   },
@@ -3185,6 +3317,41 @@
         "sourceProject": "cateringService",
         "path": "frontend/src/pages/CostEstimator.jsx",
         "route": "/CostEstimator",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
+    "name": "Create Cooking Timer",
+    "canonicalKey": "cooking timer",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "api"
+    ],
+    "routes": [
+      "/cooking-timers?tool=create-cooking-timer",
+      "/create-cooking-timer"
+    ],
+    "sourceProjects": [
+      "AiRecipeMealPlanner"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/CookingTimers.js:470",
+        "route": "/cooking-timers?tool=create-cooking-timer",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "backend/routes/ai.js:37",
+        "route": "/create-cooking-timer",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -3777,12 +3944,14 @@
     "canonicalKey": "dietary mapper restriction",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
       "/DietaryRestrictionMapper",
-      "/dietary-restriction-mapper"
+      "/dietary-restriction-mapper",
+      "/dietary-restriction-mapper?tool=dietary-restriction-mapper"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -3791,6 +3960,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/DietaryRestrictionMapper.js:56",
+        "route": "/dietary-restriction-mapper?tool=dietary-restriction-mapper",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -5743,10 +5919,12 @@
     "canonicalKey": "generate grocery",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
-      "/generate-grocery-list"
+      "/generate-grocery-list",
+      "/grocery-lists?tool=generate-grocery-list"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -5755,6 +5933,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/GroceryLists.js:327",
+        "route": "/grocery-lists?tool=generate-grocery-list",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -5769,10 +5954,12 @@
     "canonicalKey": "generate recipe",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
-      "/generate-recipe"
+      "/generate-recipe",
+      "/recipes?tool=generate-recipe"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -5781,6 +5968,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/Recipes.js:353",
+        "route": "/recipes?tool=generate-recipe",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -7203,13 +7397,15 @@
     "canonicalKey": "meal plan prep",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "navigation",
       "page"
     ],
     "routes": [
       "/MealPrepPlan",
-      "/meal-prep-plan"
+      "/meal-prep-plan",
+      "/meal-prep-plan?tool=meal-prep-plan"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -7218,6 +7414,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/MealPrepPlan.js:50",
+        "route": "/meal-prep-plan?tool=meal-prep-plan",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -7944,18 +8147,15 @@
     "name": "Nutrition Balances",
     "canonicalKey": "balance nutrition",
     "aliases": [
-      "Balance Nutrition",
       "Nutrition Balance Detail"
     ],
     "kinds": [
-      "api",
       "model",
       "page"
     ],
     "routes": [
       "/NutritionBalanceDetail",
       "/NutritionBalances",
-      "/balance-nutrition",
       "/nutrition-balances"
     ],
     "sourceProjects": [
@@ -7965,13 +8165,6 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AiRecipeMealPlanner",
-        "path": "backend/routes/ai.js:34",
-        "route": "/balance-nutrition",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
       {
         "kind": "page",
         "sourceProject": "AiRecipeMealPlanner",
@@ -8100,6 +8293,32 @@
     ]
   },
   {
+    "name": "Nutrition Log Not Found",
+    "canonicalKey": "found log not nutrition",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/nutrition/:id"
+    ],
+    "sourceProjects": [
+      "AiRecipeMealPlanner"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/NutritionDetail.js:1",
+        "route": "/nutrition/:id",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Nutrition Macros",
     "canonicalKey": "macro nutrition",
     "aliases": [],
@@ -8175,9 +8394,11 @@
     "canonicalKey": "grocery optimize",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/grocery-optimizations?tool=optimize-grocery",
       "/optimize-grocery"
     ],
     "sourceProjects": [
@@ -8187,6 +8408,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/GroceryOptimizations.js:356",
+        "route": "/grocery-optimizations?tool=optimize-grocery",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -8681,16 +8909,15 @@
     ]
   },
   {
-    "name": "Plate Margin Reprice Page",
+    "name": "Plate Margin Reprice",
     "canonicalKey": "margin plate reprice",
-    "aliases": [
-      "Plate Margin Reprice"
-    ],
+    "aliases": [],
     "kinds": [
+      "ai-page",
       "page"
     ],
     "routes": [
-      "/PlateMarginRepricePage",
+      "/plate-margin-reprice",
       "plate-margin-reprice"
     ],
     "sourceProjects": [
@@ -8701,12 +8928,38 @@
     ],
     "evidence": [
       {
+        "kind": "ai-page",
+        "sourceProject": "AIMenuDigitizer",
+        "path": "frontend/src/pages/PlateMarginRepricePage.tsx:1",
+        "route": "/plate-margin-reprice",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
+      {
         "kind": "page",
         "sourceProject": "AIMenuDigitizer",
         "path": "frontend/src/App.tsx:98",
         "route": "plate-margin-reprice",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Plate Margin Reprice Page",
+    "canonicalKey": "margin plate reprice",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/PlateMarginRepricePage"
+    ],
+    "sourceProjects": [
+      "AIMenuDigitizer"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
       {
         "kind": "page",
         "sourceProject": "AIMenuDigitizer",
@@ -8851,6 +9104,32 @@
     ]
   },
   {
+    "name": "Predictive Menu Success By Client Profile Cuisine",
+    "canonicalKey": "by client cuisine menu predictive profile success",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/Batch09/PredictiveMenuSuccessByClientProfileCuisineCfs"
+    ],
+    "sourceProjects": [
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "cateringService",
+        "path": "frontend/src/pages/Batch09/PredictiveMenuSuccessByClientProfileCuisineCfs.jsx:1",
+        "route": "/Batch09/PredictiveMenuSuccessByClientProfileCuisineCfs",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
     "name": "Predictive Menu Success By Client Profile Cuisine Cfs",
     "canonicalKey": "by cfs client cuisine menu predictive profile success",
     "aliases": [],
@@ -8872,6 +9151,32 @@
         "sourceProject": "cateringService",
         "path": "frontend/src/pages/Batch09/PredictiveMenuSuccessByClientProfileCuisineCfs.jsx",
         "route": "/Batch09/PredictiveMenuSuccessByClientProfileCuisineCfs",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      }
+    ]
+  },
+  {
+    "name": "Predictive Staffing Labor Hours By Event Size",
+    "canonicalKey": "by event hour labor predictive size staffing",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/Batch09/PredictiveStaffingLaborHoursByEventSizeCfs"
+    ],
+    "sourceProjects": [
+      "cateringService"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/recipe-meal-planner"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "cateringService",
+        "path": "frontend/src/pages/Batch09/PredictiveStaffingLaborHoursByEventSizeCfs.jsx:1",
+        "route": "/Batch09/PredictiveStaffingLaborHoursByEventSizeCfs",
         "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
@@ -8988,7 +9293,6 @@
       "Price Optimizer Page"
     ],
     "kinds": [
-      "navigation",
       "page"
     ],
     "routes": [
@@ -8997,21 +9301,12 @@
       "price-optimizer"
     ],
     "sourceProjects": [
-      "AIMenuDigitizer",
-      "AISubscriptionBoxCurator"
+      "AIMenuDigitizer"
     ],
     "consolidatedFromApps": [
-      "retail-commerce-consumer/personal-stylist",
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
-      {
-        "kind": "navigation",
-        "sourceProject": "AISubscriptionBoxCurator",
-        "path": "frontend/src/components/Sidebar.jsx:26",
-        "route": "",
-        "originApp": "retail-commerce-consumer/personal-stylist"
-      },
       {
         "kind": "page",
         "sourceProject": "AIMenuDigitizer",
@@ -10437,12 +10732,14 @@
     "canonicalKey": "ingredient seasonal suggester",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
       "/SeasonalIngredientSuggester",
-      "/seasonal-ingredient-suggester"
+      "/seasonal-ingredient-suggester",
+      "/seasonal-ingredient-suggester?tool=seasonal-ingredient-suggester"
     ],
     "sourceProjects": [
       "AiRecipeMealPlanner"
@@ -10451,6 +10748,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/SeasonalIngredientSuggester.js:43",
+        "route": "/seasonal-ingredient-suggester?tool=seasonal-ingredient-suggester",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
@@ -10888,9 +11192,11 @@
     "canonicalKey": "leftover suggest",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/leftover-suggestions?tool=suggest-leftovers",
       "/suggest-leftovers"
     ],
     "sourceProjects": [
@@ -10900,6 +11206,13 @@
       "retail-commerce-consumer/recipe-meal-planner"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiRecipeMealPlanner",
+        "path": "frontend/src/pages/LeftoverSuggestions.js:373",
+        "route": "/leftover-suggestions?tool=suggest-leftovers",
+        "originApp": "retail-commerce-consumer/recipe-meal-planner"
+      },
       {
         "kind": "api",
         "sourceProject": "AiRecipeMealPlanner",
